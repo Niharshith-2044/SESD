@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🛒 Your Cart</h1>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+  <h2>🧾 Bill</h2>
+  <div id="bill"></div>
+
+  <button id="clearCart">Clear Cart</button>
+
+  <h2>⚙️ Singleton Config Instance</h2>
+  <pre id="config"></pre>
+
+  <script src="app.js"></script>
+</body>
+</html>

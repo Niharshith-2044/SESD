@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📋 Menu</h1>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+  <div class="menu">
+    <button onclick="orderFood('Burger', 150)">Order Burger - ₹150</button>
+    <button onclick="orderFood('Pizza', 250)">Order Pizza - ₹250</button>
+    <button onclick="orderFood('Biryani', 300)">Order Biryani - ₹300</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
